@@ -1,6 +1,6 @@
-package org.jetbrains.plugins.template.services
+package com.github.qwazer.ideamarkdowncopyasplugin.services
 
-import org.jetbrains.plugins.template.MyBundle
+import com.github.qwazer.ideamarkdowncopyasplugin.MyBundle
 
 class MyApplicationService {
 
