@@ -1,18 +1,28 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.qwazer.ideamarkdowncopyasplugin</id>
-    <name>idea-markdown-copy-as-plugin</name>
+    <id>io.github.md2conf.idea-markdown-copy-as-plugin</id>
+    <name>Markdown-Copy-As</name>
     <vendor>qwazer</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.qwazer.ideamarkdowncopyasplugin.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.qwazer.ideamarkdowncopyasplugin.services.MyProjectService"/>
-    </extensions>
+    <actions>
 
-    <applicationListeners>
-        <listener class="com.github.qwazer.ideamarkdowncopyasplugin.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
+        <action id="com.github.qwazer.ideamarkdowncopyas.action.MarkdownCopyAsJIraFormattedAction"
+                class="com.github.qwazer.ideamarkdowncopyas.action.MarkdownCopyAsJIraFormattedAction"
+                text="Copy Markdown as Jira Formatted"
+                description="Copy markdown as Jira formatted">
+            <add-to-group group-id="CutCopyPasteGroup" anchor="after" relative-to-action="CopyPaths"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="$Copy"/>
+        </action>
+
+        <action id="com.github.qwazer.ideamarkdowncopyas.action.MarkdownCopyAsHtmlFormattedAction"
+                class="com.github.qwazer.ideamarkdowncopyas.action.MarkdownCopyAsHtmlFormattedAction"
+                text="Copy Markdown as HTML Formatted"
+                description="Copy markdown as HTML formatted">
+            <add-to-group group-id="CutCopyPasteGroup" anchor="after" relative-to-action="CopyPaths"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="$Copy"/>
+        </action>
+
+    </actions>
 </idea-plugin>

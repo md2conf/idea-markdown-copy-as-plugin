@@ -23,6 +23,10 @@ repositories {
     mavenCentral()
 }
 
+dependencies {
+    implementation("com.vladsch.flexmark:flexmark-all:0.64.0")
+}
+
 // Set the JVM language level used to compile sources and generate files - Java 11 is required since 2020.3
 kotlin {
     jvmToolchain {
