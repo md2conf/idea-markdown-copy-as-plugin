@@ -9,9 +9,8 @@ Copy **Markdown** as **JIRA** or **HTML** formatted text.
 
 - The plugin provides additional editor context actions available in markdown context.
 - Conversion performed using [flexmark](https://github.com/vsch/flexmark-java) library.
-
-The idea taken from [markdown-navigator-enhanced](https://plugins.jetbrains.com/plugin/7896) which is not compatible
-with recent versions of IDEA. This is partial replacement of "markdown-navigator-enhanced" functionality.
+- The idea taken from [markdown-navigator-enhanced](https://plugins.jetbrains.com/plugin/7896) which is not compatible
+  with recent versions of IDEA since 2021.2.
 
 <!-- Plugin description end -->
 

@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 ### Changed
+- [minor] Setup plugin supported build number ranges
+
+## [0.0.4] - 2022-11-19
+### Changed
 - Actions "MarkdownCopyAsHtmlFormattedAction" and "MarkdownCopyAsJIraFormattedAction" visible only in Markdown editor context.
 
 ## [0.0.3] - 2022-11-19
