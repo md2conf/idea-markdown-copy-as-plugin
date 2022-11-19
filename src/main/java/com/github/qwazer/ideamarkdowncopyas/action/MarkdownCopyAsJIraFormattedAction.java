@@ -18,7 +18,10 @@ public class MarkdownCopyAsJIraFormattedAction extends EditorAction {
     @Override
     public void update(@NotNull AnActionEvent e) {
         super.update(e);
-        e.getPresentation().setVisible(e.getPresentation().isVisible() && !EditorUtil.contextMenuInvokedOutsideOfSelection(e));
+        e.getPresentation().setVisible(e.getPresentation().isVisible()
+                && !EditorUtil.contextMenuInvokedOutsideOfSelection(e)
+                && ActionUtils.isMarkdownDocument(e)
+        );
     }
 
     @Override
