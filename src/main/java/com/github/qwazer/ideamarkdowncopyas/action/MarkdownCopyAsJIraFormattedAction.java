@@ -2,6 +2,7 @@ package com.github.qwazer.ideamarkdowncopyas.action;
 
 import com.github.qwazer.ideamarkdowncopyas.action.handler.MarkdownToJiraFormattedHandler;
 import com.intellij.openapi.actionSystem.AnActionEvent;
+import com.intellij.openapi.actionSystem.CommonDataKeys;
 import com.intellij.openapi.actionSystem.DataContext;
 import com.intellij.openapi.actionSystem.Presentation;
 import com.intellij.openapi.editor.Editor;
@@ -18,6 +19,8 @@ public class MarkdownCopyAsJIraFormattedAction extends EditorAction {
     @Override
     public void update(@NotNull AnActionEvent e) {
         super.update(e);
+        boolean enabled = e.getData(CommonDataKeys.EDITOR) != null;
+        if (!enabled) return;
         e.getPresentation().setVisible(e.getPresentation().isVisible()
                 && !EditorUtil.contextMenuInvokedOutsideOfSelection(e)
                 && ActionUtils.isMarkdownDocument(e)

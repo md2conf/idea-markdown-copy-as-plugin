@@ -3,6 +3,15 @@
 # idea-markdown-copy-as-plugin Changelog
 
 ## [Unreleased]
+### Changed 
+- remove action "MarkdownCopyAsHtmlFormattedAction"
+- fix NPE
+
+## [0.0.5] - 2022-11-19
+### Changed
+- minor changes
+
+## [0.0.4] - 2022-11-19
 ### Changed
 - [minor] Setup plugin supported build number ranges
 
