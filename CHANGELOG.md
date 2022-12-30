@@ -3,7 +3,9 @@
 # idea-markdown-copy-as-plugin Changelog
 
 ## [Unreleased]
-### Changed 
+
+## [0.0.6]
+### Changed
 - remove action "MarkdownCopyAsHtmlFormattedAction"
 - fix NPE
 
