@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Added
+- Action "MarkdownCopyAsHtmlFormattedAction"
+
 ## [0.0.6] - 2022-12-30
 ### Changed
 - remove action "MarkdownCopyAsHtmlFormattedAction"
