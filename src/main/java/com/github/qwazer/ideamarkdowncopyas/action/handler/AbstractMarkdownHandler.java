@@ -6,6 +6,7 @@ import com.intellij.openapi.editor.Caret;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.editor.actionSystem.EditorActionHandler;
 import com.intellij.openapi.ide.CopyPasteManager;
+import com.intellij.util.ui.TextTransferable;
 import com.vladsch.flexmark.html.HtmlRenderer;
 import com.vladsch.flexmark.parser.Parser;
 import com.vladsch.flexmark.util.ast.IRender;
@@ -39,7 +40,7 @@ public abstract class AbstractMarkdownHandler extends EditorActionHandler {
         }
         Node document = parser.parse(text);
         String res = renderer.render(document);
-        TextBlockTransferable contents = new TextBlockTransferable(res, Collections.emptyList(), null);
+        TextTransferable contents= new TextTransferable(res);
         CopyPasteManager.getInstance().setContents(contents);
     }
 }
